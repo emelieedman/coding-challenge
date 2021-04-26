@@ -12,7 +12,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body onresize="fitText()">
     <div class="container">
       <form class="form">
         <label for="txt" id="txt-label">Enter a text:</label>
@@ -23,7 +23,7 @@
           name="txt"
           onkeyup="onChangingInputText()"
         />
-        <label for="range" id="range-label">Set a width in px:</label>
+        <label for="range" id="range-label">Set the width in px:</label>
         <div class="range-container">
           <input
             type="range"

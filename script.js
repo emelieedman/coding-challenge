@@ -1,11 +1,12 @@
 const txtInput = document.getElementById('txt');
 const rangeInput = document.getElementById('range');
-const displayNumberInPX = document.getElementById('range-output');
+const displayNumber = document.getElementById('range-output');
 const txtOutput = document.getElementById('output');
 const txtContainer = document.getElementById('txtContainer');
 
 const onChangingInputText = () => {
   output.innerHTML = txtInput.value;
+  fitText(rangeInput.value);
 };
 
 const fitText = (containerWidth, fontSize = 48) => {
@@ -19,7 +20,7 @@ const fitText = (containerWidth, fontSize = 48) => {
 const onChangingContainerWidth = () => {
   let containerWidth = rangeInput.value;
 
-  displayNumberInPX.innerHTML = containerWidth + 'px';
+  displayNumber.innerHTML = containerWidth + 'px';
 
   txtContainer.style.width = containerWidth + 'px';
 
