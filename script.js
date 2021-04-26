@@ -5,7 +5,7 @@ const txtOutput = document.getElementById('output');
 const txtContainer = document.getElementById('txtContainer');
 
 const onChangingInputText = () => {
-  output.innerHTML = txtInput.value;
+  txtOutput.innerHTML = txtInput.value;
   fitText(rangeInput.value);
 };
 
