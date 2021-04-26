@@ -19,19 +19,21 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 100vw;
+  grid-template-columns: minmax(1px, 10vw) 80vw minmax(1px, 10vw);
   grid-template-rows: 70vh 20vh;
 }
 
 .form {
   z-index: 2;
   grid-row-start: 1;
+  grid-column-start: 2;
   justify-self: center;
   align-self: center;
   display: grid;
   grid-template-rows: 20% 10% 10% 20% 10% 10% 20%;
   grid-template-columns: 10% 80% 10%;
   width: 30vw;
+  min-width: 300px;
   height: 45vh;
   background: rgba(255, 255, 255, 0.658);
   border: 2px solid rgba(255, 255, 255, 0.89);
@@ -50,11 +52,13 @@ body {
 }
 
 .txt-input {
+  font-size: 18px;
+  padding-left: 20px;
   grid-row-start: 3;
   grid-column-start: 2;
   justify-self: left;
   align-self: center;
-  width: 100%;
+  width: 90%;
   height: 50px;
   border: none;
   background-color: #ffffff;
@@ -92,8 +96,9 @@ body {
   justify-self: center;
 }
 
-.output-wrapper {
+.txtContainer {
   grid-row-start: 2;
+  grid-column-start: 2;
   justify-self: center;
   display: grid;
   justify-content: center;
