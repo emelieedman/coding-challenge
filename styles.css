@@ -1,6 +1,10 @@
 body {
   background-image: url(./assets/pexels-darius-krause-2609107.jpg);
   background-size: cover;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 152%;
 }
 
 .overlay {
@@ -16,7 +20,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: 100vw;
-  grid-template-rows: 70vh 30vh;
+  grid-template-rows: 70vh 20vh;
 }
 
 .form {
@@ -29,7 +33,7 @@ body {
   grid-template-columns: 10% 80% 10%;
   width: 30vw;
   height: 45vh;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.658);
   border: 2px solid rgba(255, 255, 255, 0.89);
   border-radius: 12.7587px;
 }
@@ -38,12 +42,6 @@ body {
   grid-row-start: 2;
   grid-column-start: 2;
   align-self: center;
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 152.19%;
 
   display: flex;
   align-items: center;
@@ -69,42 +67,47 @@ body {
   grid-column-start: 2;
   align-self: flex-end;
 
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 152.19%;
-
   display: flex;
   align-items: center;
 
   color: #000000;
 }
 
-.range-input {
+.range-container {
+  width: 100%;
   grid-row-start: 6;
   grid-column-start: 2;
   justify-self: left;
   align-self: center;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
 }
 
-.output {
+.range-input {
+  grid-column-start: 1;
+}
+
+.range-output {
+  grid-column-start: 2;
+  justify-self: center;
+}
+
+.output-wrapper {
   grid-row-start: 2;
   justify-self: center;
-  display: flex;
-  align-items: center;
-  padding-left: 15px;
-  padding-right: 15px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+
   z-index: 2;
   border: 1px solid #ffffff;
   border-radius: 8px;
   height: 50px;
-  width: auto;
 
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 48px;
-  line-height: 152%;
   color: #ffffff;
+}
+
+.output {
+  white-space: nowrap;
+  font-size: 48px;
 }

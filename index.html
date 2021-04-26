@@ -17,15 +17,29 @@
       <form class="form">
         <label for="txt" id="txt-label">Enter a text:</label>
         <input
+          type="text"
           class="txt-input"
           id="txt"
-          type="text"
+          name="txt"
           onkeyup="onChangingInputText()"
         />
         <label for="range" id="range-label">Set a width in px:</label>
-        <input class="range-input" id="range" type="range" />
+        <div class="range-container">
+          <input
+            type="range"
+            class="range-input"
+            id="range"
+            name="range"
+            min="60"
+            max="1500"
+            oninput="onChangingContainerWidth()"
+          />
+          <p class="range-output" id="range-output"></p>
+        </div>
       </form>
-      <div class="output" id="output"></div>
+      <div class="output-wrapper" id="output-wrapper">
+        <div class="output" id="output"></div>
+      </div>
     </div>
 
     <div class="overlay"></div>
