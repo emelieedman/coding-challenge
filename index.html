@@ -16,14 +16,19 @@
     <div class="container">
       <form class="form">
         <label for="txt" id="txt-label">Enter a text:</label>
-        <input class="txt-input" id="txt" type="text" />
+        <input
+          class="txt-input"
+          id="txt"
+          type="text"
+          onkeyup="onChangingInputText()"
+        />
         <label for="range" id="range-label">Set a width in px:</label>
         <input class="range-input" id="range" type="range" />
       </form>
-      <div class="output">output text here</div>
+      <div class="output" id="output"></div>
     </div>
 
     <div class="overlay"></div>
-    <script src="script.ts"></script>
+    <script src="script.js"></script>
   </body>
 </html>
